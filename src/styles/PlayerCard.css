@@ -1,0 +1,351 @@
+.player-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.player-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Header */
+.player-card-header {
+    position: relative;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.player-avatar-placeholder {
+    font-size: 4rem;
+    opacity: 0.5;
+}
+
+/* Card Body */
+.player-card-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Name */
+.player-name {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    word-break: break-word;
+}
+
+/* Meta Information */
+.player-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badge-gender {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.badge-age {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.badge-skill {
+    background: #c8e6c9;
+    color: #2e7d32;
+}
+
+.badge-frequency {
+    background: #ffe0b2;
+    color: #e65100;
+}
+
+/* Bio */
+.player-bio {
+    margin: 0 0 15px 0;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Location */
+.player-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.location-icon {
+    font-size: 1.1rem;
+}
+
+.location-text {
+    flex: 1;
+    word-break: break-word;
+}
+
+/* Sports Info */
+.player-sports {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+.sport-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.sport-item .label {
+    font-weight: 600;
+    color: #333;
+    min-width: 100px;
+}
+
+/* Contact Info */
+.player-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 6px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.contact-item .label {
+    font-size: 1rem;
+}
+
+.contact-item .value {
+    word-break: break-all;
+    flex: 1;
+}
+
+/* Entity ID */
+.player-id {
+    text-align: center;
+    padding: 8px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    color: #999;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+/* Card Footer */
+.player-card-footer {
+    display: flex;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.player-card-footer .btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 0.85rem;
+}
+
+.player-id {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.player-id small {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+/* Algolia Relevance Metadata */
+.algolia-relevance {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.relevance-details {
+    cursor: pointer;
+    user-select: none;
+}
+
+.relevance-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    color: #667eea;
+    font-size: 0.95rem;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+    list-style: none;
+}
+
+.relevance-summary:hover {
+    color: #764ba2;
+}
+
+/* Custom arrow for details */
+.relevance-details summary::marker {
+    color: #667eea;
+}
+
+.relevance-score {
+    font-size: 0.85rem;
+    color: #764ba2;
+    font-weight: 700;
+    margin-left: 8px;
+    background: #f5f3ff;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.relevance-content {
+    margin-top: 12px;
+    padding-left: 12px;
+    border-left: 3px solid #667eea;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.relevance-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.9rem;
+}
+
+.field-label {
+    font-weight: 600;
+    color: #333;
+    display: inline-block;
+}
+
+.field-value {
+    color: #666;
+    word-break: break-word;
+}
+
+.keywords-text {
+    background: #f5f3ff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.field-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+/* Match Badges */
+.token-badge,
+.match-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.token-badge {
+    background: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #90caf9;
+}
+
+.match-badge {
+    color: #fff;
+    border: none;
+}
+
+.match-sport {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.match-skill {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.match-location {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .player-card-header {
+        height: 160px;
+    }
+
+    .player-name {
+        font-size: 1.1rem;
+    }
+
+    .player-card-body {
+        padding: 15px;
+    }
+
+    .player-card-footer {
+        flex-direction: column;
+    }
+
+    .player-card-footer .btn {
+        width: 100%;
+    }
+}
